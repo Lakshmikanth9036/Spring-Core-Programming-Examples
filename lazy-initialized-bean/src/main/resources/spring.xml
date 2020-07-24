@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+			
+		<!-- By default ApplicationContext IoC Container performs early loading,
+		     to create lazy-initialized-bean with ApplicationContext use lazy-init="true"
+		     attribute of bean element, by default this is false.
+		     To define all bean as lazy-initaialized-bean ou can use default-lazy-init="true"
+		     elements of base element. -->
+	
+	<bean id="customer" class="com.Biditvats.domain.Customer" lazy-init="true">
+		<property name="id" value="1001" />
+		<property name="firstName" value="Bidit" />
+		<property name="lastName" value="Jha" />
+		<property name="email" value="Biditvats@gmail.com" />
+		<property name="mobile" value="9916712669" />
+	</bean>
+	
+</beans>

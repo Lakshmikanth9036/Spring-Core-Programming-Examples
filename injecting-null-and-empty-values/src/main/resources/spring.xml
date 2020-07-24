@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Empty value you can use for String only.
+		null value you can use for String as well as any other object  -->	
+		
+		<bean id="customer" class="com.kalibermind.domain.Customer">
+			<property name="id" value="1001" />
+			<property name="firstName" value="Bidit" />
+			<property name="lastName" value="" /> <!-- Empty String Value -->
+			<property name="email">
+				<null /> <!-- Null Value -->
+			</property>
+			<property name="mobile" value="9916712669" />
+		
+		</bean>
+</beans>

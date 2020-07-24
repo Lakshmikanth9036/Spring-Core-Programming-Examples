@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+		<bean id="customer1" class="com.kalibermind.domain.Customer">
+			<property name="id" value="1001" />
+			<property name="firstName" value="Chandra" />
+			<property name="lastName" value="Verma" />
+			<property name="email" value="CPVerma@gmail.com" />
+			<property name="mobiles">
+				<list>
+					<value>8123417647</value>
+					<value>8123417777</value>
+					<value>9899965342</value>
+					<value>8123417647</value>
+				</list>
+			</property>
+		 </bean>
+		 
+		 <bean id="customer2" class="com.kalibermind.domain.Customer">
+		 	<constructor-arg value="1101" />
+		 	<constructor-arg value="Bidit" />
+		 	<constructor-arg value="Vats" />
+		 	<constructor-arg value="Biditvats@gmail.com" />
+		 	<constructor-arg>
+		 		<list>
+		 			<value>9916712669</value>
+		 			<value>8892550034</value>
+		 			<value>8050130841</value>
+		 			<value>8073697765</value>
+		 		</list>
+		 	</constructor-arg>
+		 </bean>	
+</beans>

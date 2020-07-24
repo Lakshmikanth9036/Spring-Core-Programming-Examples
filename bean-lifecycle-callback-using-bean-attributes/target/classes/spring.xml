@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- if application has more than one bean object and all has
+	     same lifecycle-callbacks, than you can use attributes of beans element
+	     default-init-method and default-destroy-method -->		
+	     
+	 <bean id="employee" class="com.Biditvats.domain.Employee"
+	 	   init-method="init" destroy-method="destroy">
+	 	 <property name="id" value="1101" />
+	 	 <property name="name" value="Bidit vats" />
+	 	 <property name="email" value="Biditvats@gmail.com" />
+	 	 <property name="dept" value="RND" />
+	 	 <property name="salary" value="75000.00" />
+	 	   </bean>	
+
+
+</beans>

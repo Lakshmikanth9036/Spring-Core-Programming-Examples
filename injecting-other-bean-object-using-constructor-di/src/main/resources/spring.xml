@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+			
+	 <bean id="customer" class="com.Biditvats.domain.Customer">
+		 	<constructor-arg value="1101" />
+		 	<constructor-arg value="Bidit" />
+		 	<constructor-arg value="Vats" />
+		 	<constructor-arg value="Biditvats@gmail.com" />
+		 	<constructor-arg value="9916712669" />
+		 	<constructor-arg ref="address" />
+	</bean>
+	
+	<bean id="address" class="com.Biditvats.domain.Address">
+		<constructor-arg value="1201" />
+		<constructor-arg value="H-1318, Ground Floor" />
+		<constructor-arg value="JP Nagar,2nd Phase" />
+		<constructor-arg value="Bengaluru" />
+		<constructor-arg value="Next to Bangalore Central Mall" />
+		<constructor-arg value="Karnataka" />
+		<constructor-arg value="560076" />
+	</bean>
+			
+</beans>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+	<bean id="product1" class="com.kalibermind.domain.Product">
+		<property name="id" value="1101" />
+		<property name="name" value="Laptop" />
+		<property name="model" value="Thinkpad" />
+		<property name="brand" value="Lenovo" />
+		<property name="price" value="45000.00" />
+		<property name="productDesc">
+			<props>
+				<prop key="color">Black</prop>
+				<prop key="ram">8GB</prop>
+				<prop key="hardisk">1024GB</prop>
+				<prop key="screen">15.6</prop>
+			</props>
+		</property>
+	</bean>	
+	
+	 <bean id="product2" class="com.kalibermind.domain.Product">
+		 	<constructor-arg value="1201" />
+		 	<constructor-arg value="Mobile" />
+		 	<constructor-arg value="iPhone7" />
+		 	<constructor-arg value="Apple" />
+		 	<constructor-arg value="45000.00" />
+		 	<constructor-arg>
+		 		<props>
+		 		<prop key="color">Red</prop>
+				<prop key="ram">4GB</prop>
+				<prop key="memory">64GB</prop>
+				<prop key="screen">5</prop>
+		 		</props>
+		 	</constructor-arg>
+		</bean>
+			
+</beans>

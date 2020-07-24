@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+			
+				
+	<bean id="customer" class="com.Biditvats.domain.Customer">
+		<property name="id" value="1001" />
+		<property name="firstName" value="Bidit" />
+		<property name="lastName" value="Jha" />
+		<property name="email" value="Biditvats@gmail.com" />
+		<property name="mobile" value="9916712669" />
+		<property name="address" ref="address" />
+	</bean>
+	
+	<bean id="admin" class="com.Biditvats.domain.Admin">
+		<property name="id" value="1101" />
+		<property name="username" value="Biditvats" />
+		<property name="email" value="Biditvats06@gmail.com" />
+		<property name="address" ref="address" />
+	</bean>
+		
+	<bean id="address" class="com.Biditvats.domain.Address">
+		<property name="id" value="1101" />
+		<property name="houseNo" value="H-1318, Ground floor" />
+		<property name="street" value="JP Nagar, 2nd Phase" />
+		<property name="city" value="Bengaluru" />
+		<property name="landmark" value="Next to Bangalore Central Mall" />
+		<property name="state" value="Karnataka" />
+		<property name="zipcode" value="560076" />
+	</bean>
+
+</beans>
